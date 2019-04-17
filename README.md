@@ -16,7 +16,7 @@ RUN yum-builddep -y python; yum -y install make postgresql-devel gcc \
  libxslt-devel libxml2-devel python-devel; yum clean all
 
 ENV PYTHON_VERSION="3.7.2"
-# Downloading and building python
+
 RUN mkdir /tmp/python-build && cd /tmp/python-build && \
   curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz > python.tgz && \
   tar xzf python.tgz && cd Python-$PYTHON_VERSION && \
